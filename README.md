@@ -1,6 +1,8 @@
 # Check In
 A web application to manage check-ins for walk-in appointments.
 
+[Go to web app](https://refreshstorage.z13.web.core.windows.net/)
+
 ### Features
 - ✔️ Fully accessible with a keyboard
 - ✔️ Simulated asynchronous fetching/submitting
