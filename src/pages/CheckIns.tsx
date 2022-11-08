@@ -13,6 +13,7 @@ const CheckIns = () => {
 	const {
 		headerTabsRef,
 		tableStatus,
+		checkIns,
 		filteredCheckIns,
 		removeAllCheckIns,
 		setDeleteHandler,
@@ -48,7 +49,7 @@ const CheckIns = () => {
 							onClick={() => setSelectedTab(0)}
 						>
 							<span>ALL</span>
-							<span className={'badge' + (selectedTab === 0 ? ' primary' : '')}>{filteredCheckIns.length}</span>
+							<span className={'badge' + (selectedTab === 0 ? ' primary' : '')}>{checkIns.length}</span>
 						</button>
 					</li>
 					<li>

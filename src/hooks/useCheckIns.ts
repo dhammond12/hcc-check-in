@@ -305,6 +305,7 @@ const useCheckIns = () => {
 	return {
 		headerTabsRef,
 		tableStatus,
+		checkIns,
 		filteredCheckIns,
 		removeAllCheckIns,
 		setDeleteHandler,
