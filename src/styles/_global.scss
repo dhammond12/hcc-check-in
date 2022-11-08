@@ -1,0 +1,69 @@
+$color-primary: #9A70F3;
+$color-primary-hover: hsl(259, 85%, 75%);
+$color-body1: hsl(259, 10%, 20%);
+$color-body2: hsl(259, 10%, 50%);
+$color-body3: hsl(259, 10%, 70%);
+$color-body4: hsl(259, 10%, 90%);
+$color-body5: hsl(259, 10%, 95%);
+$color-error-fg: hsl(4, 72%, 52%);
+$color-error-bg: hsl(4, 100%, 93%);
+$color-warning-fg: hsl(30, 100%, 39%);
+$color-warning-bg: hsl(30, 100%, 90%);
+$color-neutral-fg: hsl(197, 100%, 50%);
+$color-neutral-bg: hsl(197, 100%, 90%);
+$color-good-fg: hsl(135, 44%, 42%);
+$color-good-bg: hsl(135, 100%, 90%);
+$color-modal-bg: hsla(259, 10%, 10%, 50%);
+
+$font-family: 'Poppins', sans-serif;
+
+$box-shadow: 0 8px 24px rgba(38, 35, 44, 0.1);
+
+$header-height: 3rem;
+
+$font-size-lg: 2.5rem;
+$font-size-md: 1.75rem;
+$font-size-sm: 1rem;
+$font-size-xs: 0.85rem;
+
+$padding-xl: 8rem;
+$padding-lg: 4rem;
+$padding-md: 2rem;
+$padding-sm: 1rem;
+$padding-xs: 0.5rem;
+
+$border-radius: 5px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+:root {
+    font-size: 14px;
+}
+
+html, body, #root, .App {
+    height: 100%;
+}
+
+h1 {
+    color: $color-body1;
+    font-size: $font-size-lg;
+}
+
+h2 {
+    color: $color-body1;
+    font-size: $font-size-md;
+}
+
+li {
+    list-style-type: none;
+}
+
+.label {
+    font-size: $font-size-xs;
+    color: $color-body3;
+}

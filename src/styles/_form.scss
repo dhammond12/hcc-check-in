@@ -1,0 +1,110 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-md;
+    min-width: 600px;
+
+    .form-fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: calc($padding-md + $padding-xs);
+        transition: opacity 300ms ease;
+
+        .form-field {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: $padding-xs;
+
+            label {
+                font-size: $font-size-xs;
+                color: $color-body3;
+                transition: color 300ms ease-out;
+                user-select: none;
+            }
+
+            .form-field-error {
+                position: absolute;
+                top: calc(100% + $padding-xs);
+                left: 0;
+                color: $color-error-fg;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: transform 300ms ease-out, opacity 300ms ease-out;
+            }
+
+            &.error {
+                input, select, textarea {
+                    border-color: $color-error-fg;
+                }
+
+                .form-field-error {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        
+        &.idle {
+            color: $color-body2;
+        }
+        &.loading {
+            color: $color-primary;
+
+            span {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                    height: 1rem;
+                    width: 1rem;
+                    border-top: 2px solid $color-primary;
+                    border-right: 2px solid $color-primary;
+                    border-bottom: 2px solid $color-primary;
+                    border-left: 2px solid transparent;
+                    border-radius: 50%;
+                    margin-right: $padding-xs;
+                    animation: spin 700ms linear infinite;
+                }
+            }
+        }
+        &.error {
+            color: $color-error-fg;
+        }
+        &.success {
+            color: $color-good-fg;
+
+            span {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                    height: 0.75rem;
+                    width: 0.5rem;
+                    border-right: 2px solid $color-good-fg;
+                    border-bottom: 2px solid $color-good-fg;
+                    margin-right: $padding-xs;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &.locked {
+        .form-fieldset {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}

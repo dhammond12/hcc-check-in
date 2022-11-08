@@ -1,0 +1,11 @@
+.checkin-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .checkin-dropdown-notes {
+        display: flex;
+        flex-direction: column;
+        gap: $padding-xs;
+    }
+}

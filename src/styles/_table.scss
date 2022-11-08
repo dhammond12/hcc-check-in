@@ -1,0 +1,193 @@
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $padding-md;
+
+    .table-header-tabs {
+        display: flex;
+        gap: $padding-md;
+
+        li {
+            button {
+                color: $color-body3;
+
+                &.selected {
+                    color: $color-body1;
+
+                    .badge {
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-header-tabs-underline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100px;
+        background-color: $color-primary;
+        transition: left 400ms ease, width 400ms ease;
+    }
+}
+
+.table-container {
+    background-color: white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                border-bottom: 1px solid $color-body4;
+
+                th {
+                    font-size: $font-size-xs;
+                    text-align: left;
+                    color: $color-body3;
+                    font-weight: normal;
+                    padding: $padding-sm $padding-md;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                border-bottom: 1px solid $color-body4;
+                cursor: pointer;
+                transition: box-shadow 300ms ease;
+                
+                td {
+                    user-select: none;
+                    color: $color-body2;
+                    padding: $padding-sm $padding-md;
+                    transition: color 300ms ease-out;
+
+                    .chevron {
+                        display: inline-block;
+                        transition: transform 300ms ease, color 300ms ease;
+                    }
+
+                    &:last-child {
+                        width: 1px;
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+
+                &:not(.dropdown):hover {
+                    & > td {
+                        color: $color-primary;
+                    }
+
+                    .chevron {
+                        color: $color-primary;
+                    }
+                }
+
+                &.opened {
+                    box-shadow: $box-shadow;
+
+                    & > td {
+                        color: $color-primary;
+                    }
+
+                    .chevron {
+                        transform: rotate(90deg);
+                        color: $color-primary;
+                    }
+                }
+
+                &.no-border {
+                    border-bottom: none;
+                }
+
+                &.dropdown {
+                    height: 0;
+                    transition: height 300ms ease;
+                    border-bottom: none;
+                    cursor: default;
+
+                    td {
+                        position: relative;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        overflow: hidden;
+
+                        .dropdown-content {
+                            width: 100%;
+                            padding: $padding-md;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+
+                    &.visible {
+                        border-bottom: 1px solid $color-body4;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-status {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $padding-md;
+
+        &:not(.idle) {
+            padding: $padding-md 0;
+        }
+        
+        &.empty {
+
+            img {
+                height: 200px;
+                user-select: none;
+            }
+    
+            span {
+                color: $color-body3;
+                user-select: none;
+            }
+        }
+
+        &.loading {
+            span {
+                position: relative;
+                color: $color-primary;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                    height: 1rem;
+                    width: 1rem;
+                    border-top: 2px solid $color-primary;
+                    border-right: 2px solid $color-primary;
+                    border-bottom: 2px solid $color-primary;
+                    border-left: 2px solid transparent;
+                    border-radius: 50%;
+                    margin-right: $padding-xs;
+                    animation: spin 700ms linear infinite;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-modal-bg;
+    display: grid;
+    place-items: center;
+
+    .modal-content {
+        padding: $padding-lg;
+        background-color: white;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+        animation: appear-up 300ms ease;
+
+        .modal-content-header {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-sm;
+            margin-bottom: $padding-md;
+
+            p {
+                color: $color-body2;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.tag {
+    display: inline-block;
+    text-align: center;
+    color: $color-body2;
+    background-color: $color-body4;
+    padding: 0.25rem $padding-sm;
+    width: 100%;
+
+    &.warning {
+        color: $color-warning-fg;
+        background-color: $color-warning-bg;
+    }
+
+    &.neutral {
+        color: $color-neutral-fg;
+        background-color: $color-neutral-bg;
+    }
+
+    &.good {
+        color: $color-good-fg;
+        background-color: $color-good-bg;
+    }
+}

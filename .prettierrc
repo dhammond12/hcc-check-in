@@ -1,0 +1,15 @@
+{
+  "tabWidth": 4,
+  "useTabs": true,
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "printWidth": 120,
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "options": {
+        "printWidth": 150
+      }
+    }
+  ]
+}

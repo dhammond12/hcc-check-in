@@ -1,0 +1,17 @@
+input:not(input[type="checkbox"]), textarea, select {
+    font-size: 1rem;
+    outline: none;
+    min-width: 300px;
+    padding: $padding-xs $padding-sm;
+    border-radius: $border-radius;
+    border: 1px solid $color-body3;
+    transition: border-color 300ms ease-out, outline-offset 30ms ease;
+
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
+textarea {
+    resize: none;
+}

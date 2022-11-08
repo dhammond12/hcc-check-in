@@ -1,0 +1,15 @@
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: $padding-md;
+
+    &.fill {
+        & > li {
+            flex: 1;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

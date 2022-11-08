@@ -1,0 +1,9 @@
+
+.page {
+    min-height: 100%;
+    padding: calc($header-height + $padding-lg) $padding-lg $padding-lg $padding-lg;
+
+    .page-title {
+        margin-bottom: $padding-md;
+    }
+}

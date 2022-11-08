@@ -1,0 +1,16 @@
+
+.badge {
+    font-size: $font-size-sm;
+    display: inline-block;
+    color: white;
+    background-color: $color-body3;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: $border-radius;
+    margin-left: $padding-xs;
+    transition: background-color 300ms ease-out;
+
+    &.primary {
+        background-color: $color-primary;
+    }
+}
